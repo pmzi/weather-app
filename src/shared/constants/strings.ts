@@ -14,6 +14,7 @@ const strings = {
   RECENT_CITIES_TITLE: 'Recently Searched Cities',
   WEATHER_ICON: 'Weather Icon',
   EDIT_LOCATION: 'Edit Location',
+  CITY_REQUIRED: 'City is required',
 };
 
 export default strings;

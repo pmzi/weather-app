@@ -36,7 +36,7 @@ export default async function handler(
 
   if (!city) {
     res.status(400).json({
-      message: 'City is required',
+      message: strings.CITY_REQUIRED,
       isOk: false,
     });
     return;
