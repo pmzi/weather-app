@@ -10,7 +10,7 @@ https://weather-app-nine-liart.vercel.app/
 
 ### Time spent
 
-I spent about 11 hours on this task:
+I spent about 11.5 hours on this task:
 - Reading OpenWeather API documentation (0.5 Hour)
 - Researching about how UI should be, I used [this](https://dribbble.com/shots/8711461-Weather-App) dribble as my inspiration (0.5 Hour)
 - Initializing project (eslint, absolute import paths, env file and basic structure) (0.5 Hour)
@@ -19,6 +19,7 @@ I spent about 11 hours on this task:
 - Responsive mode (1 Hour)
 - Add recent cities (1 Hour)
 - Add current city (0.5 Hour)
+- Setting up jest and adding test (0.5 Hour)
 - Adding Dockerfile and docker-compose (0.5 Hour)
 - Deploying to Vercel (0.5 Hour)
 
