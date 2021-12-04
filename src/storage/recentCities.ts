@@ -9,7 +9,9 @@ function get() {
 function add(city: string) {
   const recentCities = get();
 
-  const recentCitiesWithoutCurrentCity = recentCities.filter((recentCity) => recentCity !== city);
+  const recentCitiesWithoutCurrentCity = recentCities.filter(
+    (recentCity) => recentCity.toLowerCase() !== city.toLowerCase(),
+  );
 
   recentCitiesWithoutCurrentCity.unshift(city);
 

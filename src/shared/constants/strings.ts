@@ -1,4 +1,6 @@
 const strings = {
+  APPEND_STRING: 'Thinkific',
+  HEAD_TITLE: 'Weather Forecast App',
   TITLE: 'Weather Forecast App',
   SEARCH_INPUT_LABEL: 'City Name:',
   SEARCH_INPUT_PLACEHOLDER: 'e.g: Vancouver',
