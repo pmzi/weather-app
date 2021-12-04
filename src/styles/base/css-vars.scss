@@ -1,10 +1,14 @@
+@use "sass:color";
+
+$primary-color: #8e44ad;
+
 :root {
-  --primary-color: #2980b9;
-  --primary-color-800: #459cd5;
-  --primary-color-600: #73b5e0;
-  --primary-color-100: #e7f2f9;
-  --primary-color-200: #d0e6f4;
-  --primary-color-300: #b9daef;
+  --primary-color: #{$primary-color};
+  --primary-color-800: #{color.scale($primary-color, $lightness: 20%)};
+  --primary-color-600: #{color.scale($primary-color, $lightness: 40%)};
+  --primary-color-100: #{color.scale($primary-color, $lightness: 90%)};
+  --primary-color-200: #{color.scale($primary-color, $lightness: 80%)};
+  --primary-color-300: #{color.scale($primary-color, $lightness: 70%)};
   --grey-200: #EAEEF4;
   --grey-300: #cad4e3;
   --red: #c0392b;
