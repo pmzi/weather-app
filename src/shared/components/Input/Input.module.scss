@@ -1,0 +1,15 @@
+.Input {
+  border: 1px solid var(--grey-200);
+  border-radius: var(--border-radius);
+  min-height: 2.5rem;
+  width: 100%;
+
+  padding: 0 var(--padding);
+
+  transition-duration: var(--transition-duration);
+
+  &:focus {
+    outline: none;
+    border-color: var(--grey-300);
+  }
+}

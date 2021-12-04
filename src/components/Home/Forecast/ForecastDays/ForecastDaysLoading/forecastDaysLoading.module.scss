@@ -1,0 +1,27 @@
+.ForecastDaysLoading {
+  &__tabItemsWrapper {
+    display: flex;
+    gap: var(--margin);
+    overflow-y: auto;
+    height: 2rem;
+  }
+  
+  &__tabItem {
+    width: 5rem;
+  }
+  
+  &__hourItemsWrapper {
+    overflow-y: auto;
+    margin-top: var(--margin);
+
+    display: flex;
+    gap: var(--margin);
+  }
+
+  &__hourItem {
+    height: 5.3rem;
+    width: 3rem;
+
+    border-radius: 4rem;
+  }
+}

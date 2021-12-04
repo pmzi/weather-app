@@ -1,0 +1,12 @@
+.Forecast {
+  &__info {
+    margin-top: calc(var(--margin) * 5);
+
+    @include mobile() {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+}

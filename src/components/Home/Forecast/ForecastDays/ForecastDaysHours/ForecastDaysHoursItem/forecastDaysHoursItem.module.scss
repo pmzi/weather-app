@@ -1,0 +1,44 @@
+.ForecastDaysHoursItem {
+  $base: ForecastDaysHoursItem;
+
+  height: 5.3rem;
+  width: 3rem;
+
+  border-radius: 4rem;
+
+  cursor: pointer;
+
+  background-color: var(--primary-color-200);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--padding) / 2) 0;
+
+  font-size: 0.7rem;
+
+  transition-duration: var(--transition-duration);
+  
+  &__imageWrapper {
+    transition-duration: var(--transition-duration);
+    border-radius: 50%;
+  }
+
+  &:hover:not(&--active) {
+    background-color: var(--primary-color-300);
+
+    transform: translateY(-0.2rem);
+  }
+  
+  &--active {
+    transform: translateY(-0.3rem);
+    background-color: var(--primary-color);
+    color: white;
+    
+    .#{$base}__imageWrapper {
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+    }
+  }
+}

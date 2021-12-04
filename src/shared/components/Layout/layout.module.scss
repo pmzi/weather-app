@@ -1,0 +1,24 @@
+.Layout {
+  width: 100%;
+  min-height: 100vh;
+  background-color: whitesmoke;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: calc(var(--margin) * 4);
+
+    text-align: center;
+
+    @include mobile(){
+      font-size: 1.5rem;
+    }
+  }
+
+  &__content {
+    max-width: var(--layout-width);
+    width: 100%;
+    margin: auto;
+
+    padding: var(--padding);
+  }
+}

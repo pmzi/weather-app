@@ -1,0 +1,38 @@
+.Search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: calc(var(--padding) * 4) var(--padding) var(--padding);
+
+  &__imageWrapper {
+    max-width: 30rem;
+    width: 100%;
+
+    margin-bottom: var(--margin);
+  }
+
+  &__box {
+    max-width: 50rem;
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin);
+  }
+
+  &__error {
+    border-left: 2px solid var(--red);
+    padding: calc(var(--padding) / 2);
+    background-color: var(--red-200);
+
+    margin-bottom: var(--margin);
+  }
+
+  &__recentCities {
+    margin-top: var(--margin);
+  }
+}

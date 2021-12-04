@@ -1,0 +1,30 @@
+.Button {
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: calc(var(--padding) / 2) var(--padding);
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--margin) / 2);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:hover {
+    background-color: var(--primary-color-800);
+  }
+
+  &--loading {
+    cursor: not-allowed;
+    background-color: var(--primary-color-800);
+  }
+}

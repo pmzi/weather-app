@@ -1,0 +1,12 @@
+.ForecastDaysHours {
+  display: flex;
+  gap: var(--margin);
+
+  padding: var(--padding) 0;
+
+  overflow-x: auto;
+
+  &__item {
+    flex-shrink: 0;
+  }
+}

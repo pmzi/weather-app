@@ -1,0 +1,66 @@
+.ForecastWeatherInfo {
+  max-width: 20rem;
+  width: 100%;
+  margin: auto;
+  
+  &__heading {
+    display: flex;
+    align-items: center;
+  }
+
+  &__dateWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__dateDayName {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    margin-bottom: var(--margin);
+
+    @include mobile(){
+      font-size: 1.5rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__degree {
+    display: flex;
+  }
+
+  &__degreeValue {
+    font-size: 8rem;
+
+    @include mobile(){
+      font-size: 6rem;
+    }
+  }
+
+  &__degreeUnit {
+    font-size: 2.5rem;
+    padding-top: var(--padding);
+    padding-left: var(--padding);
+  }
+
+  &__location {
+    display: flex;
+    gap: calc(var(--margin) / 2);
+    align-items: center;
+  }
+
+  &__editIcon {
+    cursor: pointer;
+  }
+
+  &__iconWrapper {
+    background: var(--primary-color-300);
+    border-radius: 50%;
+    margin-right: var(--margin);
+  }
+}

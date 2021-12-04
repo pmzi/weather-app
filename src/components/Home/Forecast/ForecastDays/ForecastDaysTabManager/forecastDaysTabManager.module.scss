@@ -1,0 +1,30 @@
+.ForecastDaysTabManager {
+  &__header {
+    display: flex;
+    gap: var(--margin);
+
+    margin-bottom: var(--margin);
+
+    max-width: 100%;
+    overflow-x: auto;
+
+    height: 2rem;
+  }
+
+  &__tabButton {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &--active {
+      color: var(--primary-color);
+    }
+  }
+}
