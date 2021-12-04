@@ -1,0 +1,6 @@
+version: "3.4"
+services:
+  thinkific:
+    build: .
+    ports:
+      - "80:3000"
