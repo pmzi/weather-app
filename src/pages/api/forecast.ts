@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { DayWeatherInfo, WeatherForecastResponse } from '@shared/types/open-weather';
 import { APIErrorResponse, APIOKResponse, WeatherForecastAPIResponse } from '@shared/types/api';
 import strings from '@shared/constants/strings';
+import { OPEN_WEATHER_API_KEY } from '@/config';
 
 type Data = APIErrorResponse | APIOKResponse<WeatherForecastAPIResponse>;
 
@@ -42,7 +43,7 @@ export default async function handler(
   }
 
   try {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.OPEN_WEATHER_API_KEY}&units=metric`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${OPEN_WEATHER_API_KEY}&units=metric`);
     const result: WeatherForecastResponse = await response.json();
 
     if (result.cod !== '200') {
