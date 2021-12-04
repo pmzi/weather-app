@@ -22,6 +22,6 @@
     height: 5.3rem;
     width: 3rem;
 
-    border-radius: 4rem;
+    border-radius: calc(var(--border-radius) * 8);
   }
 }
