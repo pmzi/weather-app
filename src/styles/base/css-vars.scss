@@ -1,19 +1,20 @@
 @use "sass:color";
 
 $primary-color: #8e44ad;
+$red: #c0392b;
 
 :root {
   --primary-color: #{$primary-color};
-  --primary-color-800: #{color.scale($primary-color, $lightness: 20%)};
-  --primary-color-600: #{color.scale($primary-color, $lightness: 40%)};
   --primary-color-100: #{color.scale($primary-color, $lightness: 90%)};
   --primary-color-200: #{color.scale($primary-color, $lightness: 80%)};
   --primary-color-300: #{color.scale($primary-color, $lightness: 70%)};
+  --primary-color-600: #{color.scale($primary-color, $lightness: 40%)};
+  --primary-color-800: #{color.scale($primary-color, $lightness: 20%)};
   --grey-200: #EAEEF4;
   --grey-300: #cad4e3;
-  --red: #c0392b;
-  --red-400: #eaaba5;
-  --red-200: #f4d5d2;
+  --red: #{$red};
+  --red-200: #{color.scale($red, $lightness: 20%)};
+  --red-400: #{color.scale($red, $lightness: 40%)};
 
   --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
