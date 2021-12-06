@@ -4,6 +4,7 @@ import Image from 'next/image';
 import weatherIconURL from '@shared/utilities/weatherIconURL';
 import strings from '@shared/constants/strings';
 import onKeyDownEnter from '@shared/utilities/onKeyDownEnter';
+import forecastDtTextToDate from '@shared/utilities/forecastDtTextToDate';
 import weatherAPI from '@/api/weather';
 import useSelectWeatherHandler from '../shared/useSelectWeatherHandler';
 import editIcon from '@/assets/icons/edit.svg';
@@ -18,7 +19,7 @@ export default function ForecastWeatherInfo() {
 
   if (!selectedHourWeatherData || isLoading || !data) return <ForecastWeatherInfoLoading />;
 
-  const selectedWeatherDataDate = new Date(selectedHourWeatherData.dt * 1000);
+  const selectedWeatherDataDate = forecastDtTextToDate(selectedHourWeatherData.dt_txt);
   const dayName = getDayRelativeName(selectedWeatherDataDate);
   const selectedData = getDateMonthDayString(selectedWeatherDataDate);
   const selectedLocationName = `${data.city.name},${data.city.country}`;

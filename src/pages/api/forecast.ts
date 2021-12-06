@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { DayWeatherInfo, WeatherForecastResponse } from '@shared/types/open-weather';
 import { APIErrorResponse, APIOKResponse, WeatherForecastAPIResponse } from '@shared/types/api';
 import strings from '@shared/constants/strings';
+import forecastDtTextToDate from '@shared/utilities/forecastDtTextToDate';
 import { OPEN_WEATHER_API_KEY } from '@/config';
 
 type Data = APIErrorResponse | APIOKResponse<WeatherForecastAPIResponse>;
@@ -12,7 +13,7 @@ type WeatherInfoGroupedByDay = {
 
 function groupByDate(data: WeatherForecastResponse['list']) {
   return data.reduce<WeatherInfoGroupedByDay>((acc, cur) => {
-    const date = new Date(cur.dt * 1000);
+    const date = forecastDtTextToDate(cur.dt_txt);
     const day = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
 
     if (!acc[day]) {

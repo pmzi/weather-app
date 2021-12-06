@@ -24,6 +24,7 @@ export interface DayWeatherInfo {
   main: Main;
   weather: [Weather];
   pop: number;
+  dt_txt: string;
 }
 
 export interface WeatherForecastResponse {
