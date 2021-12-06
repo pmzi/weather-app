@@ -36,6 +36,7 @@ Well, I worked on this project for a really short amount of time, these are the 
 - Use svgr to use SVGs as icons
 - Make the app multi page so people can share url of a city directly. It is also better for SEO.
 - Add search for city name
+- Transform snake_case to camelCase in the server response
 
 ### Instructions to run assignment locally
 First of all, change `.env.sample` to `.env` and provide the required variables stated there.
